@@ -1,5 +1,10 @@
+export interface SourceTextAndOptionsData {
+    text_to_translate: string,
+    options: {[key: string]: string}
+} 
+
 export default function UseTaskSelectCorrectOptionLogic() {
-    const data = {
+    const data: SourceTextAndOptionsData = {
         text_to_translate: "Here comes text to translate", 
         options: {
             option_correct: "Here comes correct phrase",
