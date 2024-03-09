@@ -1,14 +1,14 @@
 import {SourceTextAndOptionsData} from '../hooks/UseTaskSelectCorrectOptionLogic'
+import { ShowSourceTextAndOptions } from './ShowSourceTextAndOptions'
 
-export default function SelectCorrectOptionView(props: SourceTextAndOptionsData) {
+export default function SelectCorrectOptionView(props: SourceTextAndOptionsData[]) {
+
     return (
         <div>
             this is Draft view
-            <p> {props.text_to_translate} </p>
-            {Object.entries(props.options).map(([key, value]) => (
-                <p key={key}>
-                    {value}
-                </p>
+            
+            {Object.entries(props).map(([index, item]) => (
+                <ShowSourceTextAndOptions key={index} value={item} />
             ))}
         </div>
 

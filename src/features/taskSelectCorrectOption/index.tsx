@@ -3,7 +3,6 @@ import UseTaskSelectCorrectOptionLogic from './hooks/UseTaskSelectCorrectOptionL
 
 export default function TaskSelectCorrectOption() {
     const logic = UseTaskSelectCorrectOptionLogic()
-    
     return (
             <TaskSelectCorrectOptionView {...logic} />
     )
