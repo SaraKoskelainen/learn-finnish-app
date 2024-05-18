@@ -1,9 +1,9 @@
 import TaskSelectCorrectOptionView from './views/TaskSelectCorrectOptionView'
-import UseTaskSelectCorrectOptionLogic from './hooks/UseTaskSelectCorrectOptionLogic'
+import useTaskSelectCorrectOptionQuery from './hooks/useTaskSelectCorrectOptionQuery'
 
 export default function TaskSelectCorrectOption() {
-    const logic = UseTaskSelectCorrectOptionLogic() // TODO: rename/ MV to query
+    const data = useTaskSelectCorrectOptionQuery() 
     return (
-            <TaskSelectCorrectOptionView {...logic} />
+            <TaskSelectCorrectOptionView {...data} />
     )
 }

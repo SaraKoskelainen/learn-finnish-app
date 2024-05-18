@@ -1,4 +1,4 @@
-import {PromptAndOptionsData} from '../hooks/UseTaskSelectCorrectOptionLogic'
+import {PromptAndOptionsData} from '../hooks/useTaskSelectCorrectOptionQuery'
 
 export function ShowSourceTextAndOptions(props: {value: PromptAndOptionsData}) {
     return (

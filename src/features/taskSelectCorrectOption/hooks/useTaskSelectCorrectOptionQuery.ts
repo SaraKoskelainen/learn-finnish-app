@@ -6,7 +6,7 @@ export interface PromptAndOptionsData {
     correct: string
 }
 
-export default function UseTaskSelectCorrectOptionLogic() {
+export default function useTaskSelectCorrectOptionQuery() {
 
     const dataFromJsonArray = dataFromJson.allData
     const promptAndOptionsData: PromptAndOptionsData[] = dataFromJsonArray 
