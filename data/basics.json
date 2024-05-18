@@ -1,0 +1,25 @@
+
+{    
+    "allData": [
+        {
+        "text_to_translate": "Here comes text to translate", 
+        "options": {
+            "a": "Here comes correct phrase",
+            "b": "Here comes incorrect phrase #1",
+            "c": "Here comes incorrect phrase #2"
+        },
+        "correct": "a"
+        },
+        {
+            "text_to_translate": "Here comes text to translate 2", 
+            "options": {
+                "a": "Here comes correct phrase 2",
+                "b": "Here comes incorrect phrase #2.1",
+                "c": "Here comes incorrect phrase #2.2"
+            },
+            "correct": "a"
+        }
+    ]
+}
+
+
