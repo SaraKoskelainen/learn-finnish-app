@@ -1,14 +1,28 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, useState } from 'react';
 
 
 const SelectOptionButton = (props: {optionKey: string, value: string}) => {
-  const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    // Do something
-    console.log("cliked ", props.optionKey, ": ", props.value)
+    var res = ""
+    var [result, setResult] = useState("") 
+
+    const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        if (props.optionKey === "c") {
+            res = "oikein!"
+        } else {
+            res = "väärin."
+        }
+            
+        setResult(res)
   };
 
-  return <button onClick={handleMouseEvent}>{props.value} </button>;
+  return (  
+    <div> 
+        <button onClick={handleMouseEvent}>{props.value} </button>
+        <p> {result} </p>
+    </div>
+  )
 };
 
 export default SelectOptionButton;
