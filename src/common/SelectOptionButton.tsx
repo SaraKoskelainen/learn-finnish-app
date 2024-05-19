@@ -1,14 +1,22 @@
 import { MouseEvent, useState } from 'react';
+import * as answers from '../../data/basics_answers.json'
 
+export interface SelectOptionAnswers {
+    [key: string]: string
+}
 
-const SelectOptionButton = (props: {optionKey: string, value: string}) => {
+const allAnswers: SelectOptionAnswers = answers.answers // todo: check if can simplify data
+
+const SelectOptionButton = (props: {objKey: string, valueKey:string, value: string}) => {
     var res = ""
     var [result, setResult] = useState("") 
 
     const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
-        if (props.optionKey === "c") {
+        // answer is correct when the key of the selected option 
+        // matches with the respective value in the answers data 
+        if (props.valueKey === allAnswers[props.objKey]) {
             res = "oikein!"
         } else {
             res = "väärin."

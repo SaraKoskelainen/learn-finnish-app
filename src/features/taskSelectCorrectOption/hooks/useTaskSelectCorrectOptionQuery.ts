@@ -3,13 +3,18 @@ import * as dataFromJson from '../../../../data/basics.json'
 export interface PromptAndOptionsData {
     text_to_translate: string,
     options: {[key: string]: string}
-    correct: string
+}
+
+export interface PromptsAndOptionsAllData {
+    [key: string]: PromptAndOptionsData
 }
 
 export default function useTaskSelectCorrectOptionQuery() {
 
     const dataFromJsonArray = dataFromJson.allData
-    const promptAndOptionsData: PromptAndOptionsData[] = dataFromJsonArray 
+    const promptsAndOptionsAllData: PromptsAndOptionsAllData = dataFromJsonArray 
     
-    return promptAndOptionsData
+    return {
+        promptsOptionsData: promptsAndOptionsAllData, 
+    }
 }
