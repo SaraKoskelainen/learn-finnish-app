@@ -1,18 +1,17 @@
 import {PromptsAndOptionsAllData} from '../hooks/useTaskSelectCorrectOptionQuery'
 import { ShowSourceTextAndOptions } from './ShowSourceTextAndOptions'
+import { Box, Heading } from '@chakra-ui/react'
 
 export default function SelectCorrectOptionView(props: {promptsOptionsData: PromptsAndOptionsAllData}) {
     
     return (
-        <div>
-            this is Draft view
-
+        <Box>
             {Object.entries(props.promptsOptionsData).map(([index, item]) => (   
-                <div key={index}>  
-                    <p>question {index}:</p> 
+                <Box key={index}>  
+                    <Heading as="h2" fontSize="xl">question {index}:</Heading> 
                     <ShowSourceTextAndOptions objKey={index} promptAndOptions={item}/>
-                </div>
+                </Box>
             ))}
-        </div>
+        </Box>
     )
 }

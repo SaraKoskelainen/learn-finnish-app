@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from 'react';
 import * as answers from '../../data/basics_answers.json'
+import { Box, Button, Text } from '@chakra-ui/react';
 
 export interface SelectOptionAnswers {
     [key: string]: string
@@ -26,10 +27,10 @@ const SelectOptionButton = (props: {objKey: string, valueKey:string, option: str
   };
 
   return (  
-    <div> 
-        <button onClick={handleMouseEvent}>{props.option} </button>
-        <p> {result} </p>
-    </div>
+    <Box p={2}> 
+        <Button onClick={handleMouseEvent} bg='brand.base-light'>{props.option} </Button>
+        <Text p={2}> {result} </Text>
+    </Box>
   )
 };
 
