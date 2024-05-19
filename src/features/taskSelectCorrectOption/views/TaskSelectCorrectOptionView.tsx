@@ -10,7 +10,7 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
             {Object.entries(props.promptsOptionsData).map(([index, item]) => (   
                 <div key={index}>  
                     <p>question {index}:</p> 
-                    <ShowSourceTextAndOptions index={index} value={item}/>
+                    <ShowSourceTextAndOptions objKey={index} promptAndOptions={item}/>
                 </div>
             ))}
         </div>

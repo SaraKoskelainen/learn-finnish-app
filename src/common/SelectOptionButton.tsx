@@ -7,7 +7,7 @@ export interface SelectOptionAnswers {
 
 const allAnswers: SelectOptionAnswers = answers.answers // todo: check if can simplify data
 
-const SelectOptionButton = (props: {objKey: string, valueKey:string, value: string}) => {
+const SelectOptionButton = (props: {objKey: string, valueKey:string, option: string}) => {
     var res = ""
     var [result, setResult] = useState("") 
 
@@ -27,7 +27,7 @@ const SelectOptionButton = (props: {objKey: string, valueKey:string, value: stri
 
   return (  
     <div> 
-        <button onClick={handleMouseEvent}>{props.value} </button>
+        <button onClick={handleMouseEvent}>{props.option} </button>
         <p> {result} </p>
     </div>
   )
