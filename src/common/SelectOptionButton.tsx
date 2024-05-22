@@ -1,6 +1,6 @@
-import { MouseEvent, useState } from 'react';
+import { MouseEvent } from 'react';
 import * as answers from '../../data/basics_answers.json'
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 
 export interface SelectOptionAnswers {
     [key: string]: string
@@ -8,10 +8,15 @@ export interface SelectOptionAnswers {
 
 const allAnswers: SelectOptionAnswers = answers.answers // todo: check if can simplify data
 
-const SelectOptionButton = (props: {objKey: string, valueKey:string, option: string}) => {
-    var res = ""
-    var [result, setResult] = useState("") 
-
+const SelectOptionButton = (props: {
+    objKey: string, 
+    valueKey:string, 
+    option: string, 
+    isAnswerSelected:boolean, 
+    updateAnswerState: (state:boolean, result:string) => void
+}) => {
+    var res = "" 
+    
     const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
@@ -23,13 +28,18 @@ const SelectOptionButton = (props: {objKey: string, valueKey:string, option: str
             res = "väärin."
         }
             
-        setResult(res)
+    props.updateAnswerState(true, res)
   };
+
+
 
   return (  
     <Box p={2}> 
-        <Button onClick={handleMouseEvent} bg='brand.base-light'>{props.option} </Button>
-        <Text p={2}> {result} </Text>
+        <Button 
+        isDisabled={props.isAnswerSelected} 
+        onClick={handleMouseEvent} 
+        bg='brand.base-light'>{props.option} 
+    </Button>        
     </Box>
   )
 };

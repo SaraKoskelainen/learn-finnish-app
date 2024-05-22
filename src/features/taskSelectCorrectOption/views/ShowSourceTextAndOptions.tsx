@@ -2,13 +2,18 @@ import SelectOptionButton from '../../../common/SelectOptionButton'
 import {PromptAndOptionsData} from '../hooks/useTaskSelectCorrectOptionQuery'
 import { Box, Text} from '@chakra-ui/react'
 
-export function ShowSourceTextAndOptions(props: {objKey: string, promptAndOptions: PromptAndOptionsData}) {
+export function ShowSourceTextAndOptions(props: {
+    objKey: string, 
+    promptAndOptions: PromptAndOptionsData, 
+    isAnswerSelected: boolean, 
+    updateAnswerState: (state: boolean, result:string) => void
+}) {
     return (
         <Box>
             <Text fontWeight="bold" p={2}> {props.promptAndOptions.text_to_translate} </Text>
             {Object.entries(props.promptAndOptions.options).map(([key, value]) => (
               <Box key={key}>
-                <SelectOptionButton objKey={props.objKey} valueKey={key} option={value} />
+                <SelectOptionButton objKey={props.objKey} valueKey={key} option={value} isAnswerSelected={props.isAnswerSelected} updateAnswerState={props.updateAnswerState}/>
                 </Box>
             ))}
         </Box>
