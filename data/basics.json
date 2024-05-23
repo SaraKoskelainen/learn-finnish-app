@@ -1,19 +1,163 @@
-{    
-    "allData": {    
+{
+    "allData": {
         "1": {
-            "text_to_translate": "Here comes text to translate", 
+            "text_to_translate": "Cake",
             "options": {
-                "a": "correct phrase 1",
-                "b": "incorrect phrase #1.1",
-                "c": "incorrect phrase #1.2"
+                "a": "Kakku",
+                "b": "Kakka",
+                "c": "Kukka"
             }
         },
         "2": {
-            "text_to_translate": "Here comes text to translate 2", 
+            "text_to_translate": "Lemonade",
             "options": {
-                "a": "correct phrase 2",
-                "b": "incorrect phrase #2.1",
-                "c": "incorrect phrase #2.2"
+                "a": "Lima",
+                "b": "Mehu",
+                "c": "Limu"
+            }
+        },
+        "3": {
+            "text_to_translate": "Apple",
+            "options": {
+                "a": "Appelsiini",
+                "b": "Omena",
+                "c": "Päärynä"
+            }
+        },
+        "4": {
+            "text_to_translate": "Beer",
+            "options": {
+                "a": "Viini",
+                "b": "Olut",
+                "c": "Viina"
+            }
+        },
+        "5": {
+            "text_to_translate": "Water",
+            "options": {
+                "a": "Vesi",
+                "b": "Maito",
+                "c": "Mehu"
+            }
+        },
+        "6": {
+            "text_to_translate": "Bread",
+            "options": {
+                "a": "Leipä",
+                "b": "Juusto",
+                "c": "Kakku"
+            }
+        },
+        "7": {
+            "text_to_translate": "Milk",
+            "options": {
+                "a": "Vesi",
+                "b": "Maito",
+                "c": "Mehu"
+            }
+        },
+        "8": {
+            "text_to_translate": "Coffee",
+            "options": {
+                "a": "Kahvi",
+                "b": "Tee",
+                "c": "Maito"
+            }
+        },
+        "9": {
+            "text_to_translate": "Tea",
+            "options": {
+                "a": "Kahvi",
+                "b": "Tee",
+                "c": "Mehu"
+            }
+        },
+        "10": {
+            "text_to_translate": "Cheese",
+            "options": {
+                "a": "Juusto",
+                "b": "Leipä",
+                "c": "Kakku"
+            }
+        },
+        "11": {
+            "text_to_translate": "Butter",
+            "options": {
+                "a": "Voi",
+                "b": "Maito",
+                "c": "Juusto"
+            }
+        },
+        "12": {
+            "text_to_translate": "Car",
+            "options": {
+                "a": "Auto",
+                "b": "Bussi",
+                "c": "Polkupyörä"
+            }
+        },
+        "13": {
+            "text_to_translate": "Bike",
+            "options": {
+                "a": "Auto",
+                "b": "Bussi",
+                "c": "Polkupyörä"
+            }
+        },
+        "14": {
+            "text_to_translate": "Bus",
+            "options": {
+                "a": "Auto",
+                "b": "Bussi",
+                "c": "Polkupyörä"
+            }
+        },
+        "15": {
+            "text_to_translate": "Train",
+            "options": {
+                "a": "Auto",
+                "b": "Juna",
+                "c": "Bussi"
+            }
+        },
+        "16": {
+            "text_to_translate": "Airplane",
+            "options": {
+                "a": "Auto",
+                "b": "Lentokone",
+                "c": "Juna"
+            }
+        },
+        "17": {
+            "text_to_translate": "Boat",
+            "options": {
+                "a": "Auto",
+                "b": "Vene",
+                "c": "Lentokone"
+            }
+        },
+        "18": {
+            "text_to_translate": "House",
+            "options": {
+                "a": "Talo",
+                "b": "Huone",
+                "c": "Asunto"
+            }
+        },
+        "19": {
+            "text_to_translate": "Room",
+            "options": {
+                "a": "Talo",
+                "b": "Huone",
+                "c": "Asunto"
+            }
+        },
+        "20": {
+            "text_to_translate": "Apartment",
+            "options": {
+                "a": "Talo",
+                "b": "Huone",
+                "c": "Asunto"
             }
         }
     }

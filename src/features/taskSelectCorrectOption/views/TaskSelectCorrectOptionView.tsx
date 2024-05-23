@@ -5,7 +5,7 @@ import {useState } from 'react'
 import ButtonMoveToNext from '../../../common/ButtonMoveToNext'
 
 export default function SelectCorrectOptionView(props: {promptsOptionsData: PromptsAndOptionsAllData}) {
-    const maxIndex = 2
+    const maxIndex = 20
     const [index, setIndex] = useState(1)
     const nextIndex = index < maxIndex ? index + 1 : index // TODO: add proper handling of reaching the end of the questions loop
 
