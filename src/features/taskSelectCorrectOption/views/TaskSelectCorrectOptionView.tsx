@@ -29,6 +29,11 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
         }
     }
 
+    const reset = () => {
+        setPoints(0)
+        setIndex(1)
+    }
+
     return (
         <>
             { index <= MAX_INDEX && 
@@ -50,7 +55,9 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
             </Box>
             }
 
-            { index > MAX_INDEX && <Feedback points={points}/> }
+            { index > MAX_INDEX && <Feedback 
+                points={points} 
+                reset={reset} /> }
         </>
     )
 }
