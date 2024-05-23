@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react';
 import { Button } from "@chakra-ui/react"
+import { MAX_INDEX } from '../features/taskSelectCorrectOption/views/TaskSelectCorrectOptionView';
 
 export default function ButtonMoveToNext(props: { 
             isAnswerSelected: boolean, 
@@ -16,7 +17,7 @@ export default function ButtonMoveToNext(props: {
  
     return (
         <Button isDisabled={!props.isAnswerSelected} onClick={handleMouseEvent} p={2} m={4} > 
-            Seuraava
+            {props.nextIndex <= MAX_INDEX ? "Seuraava" : "Valmis"}
         </ Button>
     )
 }
