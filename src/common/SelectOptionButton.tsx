@@ -13,25 +13,22 @@ const SelectOptionButton = (props: {
     valueKey:string, 
     option: string, 
     isAnswerSelected:boolean, 
-    updateAnswerState: (state:boolean, result:string) => void
+    updateAnswerState: (state:boolean, isCorrectAnswer: null | boolean) => void
 }) => {
-    var res = "" 
-    
+    var isCorrectAnswer: null | boolean = null 
     const handleMouseEvent = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
         // answer is correct when the key of the selected option 
         // matches with the respective value in the answers data 
         if (props.valueKey === allAnswers[props.objKey]) {
-            res = "oikein!"
+            isCorrectAnswer = true
         } else {
-            res = "väärin."
+            isCorrectAnswer = false
         }
             
-    props.updateAnswerState(true, res)
+    props.updateAnswerState(true, isCorrectAnswer)
   };
-
-
 
   return (  
     <Box p={2}> 

@@ -6,7 +6,7 @@ export function ShowSourceTextAndOptions(props: {
     objKey: string, 
     promptAndOptions: PromptAndOptionsData, 
     isAnswerSelected: boolean, 
-    updateAnswerState: (state: boolean, result:string) => void
+    updateAnswerState: (state: boolean, isCorrectAnswer: null | boolean) => void
 }) {
     return (
         <Box>

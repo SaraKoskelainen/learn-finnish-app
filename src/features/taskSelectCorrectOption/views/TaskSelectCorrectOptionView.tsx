@@ -17,12 +17,16 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
     const item = props.promptsOptionsData[index]
 
     const [isAnswerSelected, setIsAnswerSelected] = useState(false)
-    var [result, setResult] = useState("") 
+    var [isCorrectAnswer, setIsCorrectAnswer] = useState<null|boolean>(null) // <null|boolean> is neede to avoid "Argument of type 'boolean | null' is not assignable to parameter of type 'SetStateAction<null>'." 
+    var [points, setPoints] = useState(0)
 
-    const updateAnswerState = (state:boolean, result: string) => {
+    const updateAnswerState = (state:boolean, isCorrectAnswer: null | boolean) => {
         setIsAnswerSelected(state)
-        setResult(result)
+        setIsCorrectAnswer(isCorrectAnswer)
 
+        if(isCorrectAnswer) {
+            setPoints(points + 1)
+        }
     }
 
     return (
@@ -30,8 +34,13 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
             { index <= MAX_INDEX && 
             <Box>
                 <Heading as="h2" fontSize="xl">question {index}:</Heading> 
-                <ShowSourceTextAndOptions objKey={index.toString()} promptAndOptions={item} isAnswerSelected={isAnswerSelected} updateAnswerState={updateAnswerState}/>
-                <Text p={2}> {result} </Text> 
+                <ShowSourceTextAndOptions 
+                    objKey={index.toString()} 
+                    promptAndOptions={item} 
+                    isAnswerSelected={isAnswerSelected} 
+                    updateAnswerState={updateAnswerState}
+                />
+                <Text p={2}> {isCorrectAnswer != null ? isCorrectAnswer ? "oikein!" : "väärin." : ""} </Text> 
                 <ButtonMoveToNext 
                     isAnswerSelected={isAnswerSelected} 
                     updateIndex={updateIndex} 
@@ -41,7 +50,7 @@ export default function SelectCorrectOptionView(props: {promptsOptionsData: Prom
             </Box>
             }
 
-            { index > MAX_INDEX && <Feedback/> }
+            { index > MAX_INDEX && <Feedback points={points}/> }
         </>
     )
 }
