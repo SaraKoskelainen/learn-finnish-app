@@ -14,14 +14,13 @@ export default function Feedback(props: {
     }
     return (
         <Box m={6}>
-            <Text>Valmista! </Text>
-            <Text>Sait oikein {props.points}/{MAX_INDEX}</Text>
+            <Text>Sait oikein {props.points}/{MAX_INDEX} - You got it right {props.points}/{MAX_INDEX}</Text>
             <Text>
-                {props.points >= 9 ? "Huippu tulos!" 
-                : props.points >= 6 ? "Hyvää työtä!" 
-                : "Harjoitus tekee mestarin!"}
+                {props.points >= 9 ? "Huippu tulos! - Great result!" 
+                : props.points >= 6 ? "Hyvää työtä! - Well done!" 
+                : "Harjoitus tekee mestarin! - Practice makes perfect!"}
             </Text>
-            <Button onClick={handleMouseEvent} m={6}> Aloita alusta</Button>
+            <Button onClick={handleMouseEvent} m={6}> Aloita alusta - Start from the beginning</Button>
         </Box>
     )
 }

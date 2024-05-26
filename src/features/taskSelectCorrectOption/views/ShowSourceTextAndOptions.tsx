@@ -9,7 +9,7 @@ export function ShowSourceTextAndOptions(props: {
     updateAnswerState: (state: boolean, isCorrectAnswer: null | boolean) => void
 }) {
     return (
-        <Box>
+        <Box margin={4}>
             <Text fontWeight="bold" p={2}> {props.promptAndOptions.text_to_translate} </Text>
             {Object.entries(props.promptAndOptions.options).map(([key, value]) => (
               <Box key={key}>

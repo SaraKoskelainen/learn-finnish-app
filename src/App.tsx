@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Heading as='h1' fontSize="4xl" color="brand.base-dark" p={4}> Learn Finnish</Heading>
+      <Heading as='h1' fontSize="4xl" color="brand.base-dark" p={4}> Opi suomea - Learn Finnish</Heading>
       <TaskSelectCorrectOption/>
       </>
   )

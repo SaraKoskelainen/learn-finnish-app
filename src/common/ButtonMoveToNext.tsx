@@ -17,7 +17,7 @@ export default function ButtonMoveToNext(props: {
  
     return (
         <Button isDisabled={!props.isAnswerSelected} onClick={handleMouseEvent} p={2} m={4} > 
-            {props.nextIndex <= MAX_INDEX ? "Seuraava" : "Valmis"}
+            {props.nextIndex <= MAX_INDEX ? "Seuraava - Next" : "Valmis - Done"}
         </ Button>
     )
 }
